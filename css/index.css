@@ -1,5 +1,6 @@
 :root {
-	--primary-light: #e5e7eb;
+	/* --primary-light: #e5e7eb; */
+    --primary-light: #fefefe;
 	--primary-dark: #1f2937;
 }
 html,
@@ -13,6 +14,7 @@ body {
 .settings--container {
 	background-color: var(--primary-light);
 	border-radius: 0.5rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .color--picker {
 	background-color: var(--primary-light);
@@ -57,6 +59,11 @@ input[type="range"]::-webkit-slider-thumb {
 	height: 1rem;
 	border-radius: 0.5rem;
 	background: var(--primary-dark);
+}
+.grid--header{
+    color: var(--primary-light);
+    font-style: italic;
+    font-weight: bolder;
 }
 .grid {
 	display: grid;
