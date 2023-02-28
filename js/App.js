@@ -20,10 +20,11 @@ function setSize(newSize) {
 }
 
 const colorPicker = document.querySelector(".color--picker");
-// const colorMode = document.querySelector(".color--mode");
-const colorMode = document.getElementById("color--mode");
-// const rainbowMode = document.querySelector(".rainbow--mode");
-const rainbowMode = document.getElementById("rainbow--mode");
+// const colorPicker = document.getElementById("color--picker");
+const colorMode = document.querySelector(".color--mode");
+// const colorMode = document.getElementById("color--mode");
+const rainbowMode = document.querySelector(".rainbow--mode");
+// const rainbowMode = document.getElementById("rainbow--mode");
 const eraserMode = document.querySelector(".eraser--mode");
 const clearButton = document.querySelector(".clear--button");
 const gridMode = document.querySelector(".grid--mode");
@@ -43,7 +44,7 @@ let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-function setColor(e) {
+function changeColor(e) {
 	if (e.type === "mouseover" && !mouseDown) return;
 	if (currentMode === "rainbow") {
 		const randomRed = Math.floor(Math.random() * 256);
@@ -51,6 +52,7 @@ function setColor(e) {
 		const randomGreen = Math.floor(Math.random() * 256);
 		e.target.style.backgroundColor = `rgb(${randomRed}, ${randomBlue}, ${randomGreen})`;
 	} else if (currentMode === "color") {
+		console.log(currentColor);
 		e.target.style.backgroundColor = currentColor;
 	} else if (currentMode === "eraser") {
 		e.target.style.backgroundColor = "#fefefe";
@@ -99,8 +101,8 @@ function setGrid(size) {
 	for (let i = 0; i < size * size; i++) {
 		const gridBox = document.createElement("div");
 		gridBox.classList.add("grid-box");
-		gridBox.addEventListener("mousedown", setColor);
-		gridBox.addEventListener("mouseover", setColor);
+		gridBox.addEventListener("mousedown", changeColor);
+		gridBox.addEventListener("mouseover", changeColor);
 		grid.appendChild(gridBox);
 
 		gridBox.classList.add("border-top-left");
