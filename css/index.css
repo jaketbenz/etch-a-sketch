@@ -68,8 +68,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .grid {
 	display: grid;
-	height: 50vh;
-	width: 50vh;
+	height: 60vh;
+	width: 60vh;
 	background-color: #fefefe;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -84,4 +84,16 @@ input[type="range"]::-webkit-slider-thumb {
 
 .border-bottom {
 	border-bottom: 1px solid rgb(156, 156, 156);
+}
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: var(--primary-light);
+	text-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+}
+.footer--link{
+    color: var(--primary-light);
+    /* font-style: italic; */
+    /* text-decoration: none; */
 }
