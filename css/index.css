@@ -1,6 +1,6 @@
 :root {
 	/* --primary-light: #e5e7eb; */
-    --primary-light: #fefefe;
+	--primary-light: #fefefe;
 	--primary-dark: #1f2937;
 }
 html,
@@ -60,15 +60,16 @@ input[type="range"]::-webkit-slider-thumb {
 	border-radius: 0.5rem;
 	background: var(--primary-dark);
 }
-.grid--header{
-    color: var(--primary-light);
-    font-style: italic;
-    font-weight: bolder;
+.grid--header {
+	color: var(--primary-light);
+	font-style: italic;
+	font-weight: bolder;
+	text-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
 }
 .grid {
 	display: grid;
-    height: 50vh;
-    width: 50vh;
+	height: 50vh;
+	width: 50vh;
 	background-color: #fefefe;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
