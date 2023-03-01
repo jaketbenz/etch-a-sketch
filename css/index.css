@@ -71,6 +71,7 @@ input[type="range"]::-webkit-slider-thumb {
 	height: 60vh;
 	width: 60vh;
 	background-color: #fefefe;
+	border: 2px solid black;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .border-top-left {
@@ -85,15 +86,15 @@ input[type="range"]::-webkit-slider-thumb {
 .border-bottom {
 	border-bottom: 1px solid rgb(156, 156, 156);
 }
-.footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: var(--primary-light);
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: var(--primary-light);
 	text-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
 }
-.footer--link{
-    color: var(--primary-light);
-    /* font-style: italic; */
-    /* text-decoration: none; */
+.footer--link {
+	color: var(--primary-light);
+	/* font-style: italic; */
+	/* text-decoration: none; */
 }
