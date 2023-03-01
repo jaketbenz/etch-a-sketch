@@ -1,5 +1,4 @@
 :root {
-	/* --primary-light: #e5e7eb; */
 	--primary-light: #fefefe;
 	--primary-dark: #1f2937;
 }
@@ -95,6 +94,4 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .footer--link {
 	color: var(--primary-light);
-	/* font-style: italic; */
-	/* text-decoration: none; */
 }
