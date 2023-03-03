@@ -19,17 +19,14 @@ function setSize(newSize) {
 	currentSize = newSize;
 }
 
-const colorPicker = document.querySelector(".color--picker");
-// const colorPicker = document.getElementById("color--picker");
-const colorMode = document.querySelector(".color--mode");
-// const colorMode = document.getElementById("color--mode");
-const rainbowMode = document.querySelector(".rainbow--mode");
-// const rainbowMode = document.getElementById("rainbow--mode");
-const eraserMode = document.querySelector(".eraser--mode");
-const clearButton = document.querySelector(".clear--button");
-const gridMode = document.querySelector(".grid--mode");
-const sizeValue = document.querySelector(".size--value");
-const sizeInput = document.querySelector(".size--input");
+const colorPicker = document.querySelector(".colorPicker");
+const colorMode = document.querySelector(".colorMode");
+const rainbowMode = document.querySelector(".rainbowMode");
+const eraserMode = document.querySelector(".eraserMode");
+const clearButton = document.querySelector(".clearButton");
+const gridMode = document.querySelector(".gridMode");
+const sizeValue = document.querySelector(".sizeValue");
+const sizeInput = document.querySelector(".sizeInput");
 const grid = document.querySelector(".grid");
 
 colorPicker.oninput = (e) => setColor(e.target.value);
@@ -44,7 +41,7 @@ let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-function changeColor(e) {
+const changeColor = (e) => {
 	if (e.type === "mouseover" && !mouseDown) return;
 	if (currentMode === "rainbow") {
 		const randomRed = Math.floor(Math.random() * 256);
@@ -52,14 +49,13 @@ function changeColor(e) {
 		const randomGreen = Math.floor(Math.random() * 256);
 		e.target.style.backgroundColor = `rgb(${randomRed}, ${randomBlue}, ${randomGreen})`;
 	} else if (currentMode === "color") {
-		console.log(currentColor);
 		e.target.style.backgroundColor = currentColor;
 	} else if (currentMode === "eraser") {
 		e.target.style.backgroundColor = "#fefefe";
 	}
-}
+};
 
-function setButton(newMode) {
+const setButton = (newMode) => {
 	if (currentMode === "color") {
 		colorMode.classList.remove("active");
 	} else if (currentMode === "rainbow") {
@@ -75,27 +71,27 @@ function setButton(newMode) {
 	} else if (newMode === "eraser") {
 		eraserMode.classList.add("active");
 	}
-}
+};
 
-function clearGrid() {
+const clearGrid = () => {
 	grid.innerHTML = "";
-}
-function resetGrid() {
+};
+const resetGrid = () => {
 	clearGrid();
 	setGrid(currentSize);
-}
+};
 
-function updateSizeValue(value) {
+const updateSizeValue = (value) => {
 	sizeValue.innerHTML = `${value} x ${value}`;
-}
+};
 
-function changeSize(value) {
+const changeSize = (value) => {
 	setSize(value);
 	updateSizeValue(value);
 	resetGrid();
-}
+};
 
-function setGrid(size) {
+const setGrid = (size) => {
 	grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 	grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 	for (let i = 0; i < size * size; i++) {
@@ -104,7 +100,6 @@ function setGrid(size) {
 		gridBox.addEventListener("mousedown", changeColor);
 		gridBox.addEventListener("mouseover", changeColor);
 		grid.appendChild(gridBox);
-
 		gridBox.classList.add("border-top-left");
 	}
 	const rightItems = document.querySelectorAll(
@@ -119,15 +114,13 @@ function setGrid(size) {
 	for (let i = 0; i < lastItems.length; i++) {
 		lastItems[i].classList.toggle("border-bottom");
 	}
-}
+};
 
 gridBox = document.querySelectorAll(".grid-box");
-console.log(gridBox);
 
-function setGridLines() {
+const setGridLines = () => {
 	console.log("test");
 	gridBox = document.querySelectorAll(".grid-box");
-	// console.log(gridBox);
 	for (i = 0; i < gridBox.length; i++) {
 		gridBox[i].classList.toggle("border-top-left");
 		if (gridBox[i].classList.contains("border-right")) {
@@ -136,10 +129,8 @@ function setGridLines() {
 		if (gridBox[i].classList.contains("border-bottom")) {
 			gridBox[i].classList.toggle("border-bottom");
 		}
-		// gridBox[i].classList.toggle("border-right");
-		// gridBox[i].classList.toggle("border-bottom");
 	}
-}
+};
 
 window.onload = () => {
 	setGrid(startSize);

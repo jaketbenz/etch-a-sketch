@@ -10,12 +10,12 @@ body {
 	min-height: 100vh;
 }
 /* Settings */
-.settings--container {
+.settingsContainer {
 	background-color: var(--primary-light);
 	border-radius: 0.5rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.color--picker {
+.colorPicker {
 	background-color: var(--primary-light);
 	height: 5rem;
 	width: 5rem;
@@ -38,11 +38,12 @@ button.active {
 	background-color: var(--primary-dark);
 	color: var(--primary-light);
 }
-.size--input {
+.sizeInput {
 	background-color: var(--primary-dark);
 }
 input[type="range"] {
 	-webkit-appearance: none;
+	appearance: none;
 	background-color: var(--primary-light);
 }
 
@@ -59,7 +60,7 @@ input[type="range"]::-webkit-slider-thumb {
 	border-radius: 0.5rem;
 	background: var(--primary-dark);
 }
-.grid--header {
+.grid__header {
 	color: var(--primary-light);
 	font-style: italic;
 	font-weight: bolder;
@@ -78,11 +79,11 @@ input[type="range"]::-webkit-slider-thumb {
 	border-left: 1px solid rgb(156, 156, 156);
 }
 
-.border-right {
+.border--right {
 	border-right: 1px solid rgb(156, 156, 156);
 }
 
-.border-bottom {
+.border--bottom {
 	border-bottom: 1px solid rgb(156, 156, 156);
 }
 .footer {
