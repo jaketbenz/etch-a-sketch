@@ -8,6 +8,7 @@ Created with HTML, CSS, JS, and Bootsrap.
 ## What I learned / attempted:
 
 ## ToDo:
+Fix CSS for sidebar.
 
 ## Assignment:
 1) Follow the instructions atop Odin’s Recipes project to set up a Git repository for this project.
