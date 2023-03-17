@@ -20,13 +20,13 @@ function setSize(newSize) {
 }
 
 const colorPicker = document.querySelector(".colorPicker");
-const colorMode = document.querySelector(".colorMode");
-const rainbowMode = document.querySelector(".rainbowMode");
-const eraserMode = document.querySelector(".eraserMode");
-const clearButton = document.querySelector(".clearButton");
-const gridMode = document.querySelector(".gridMode");
-const sizeValue = document.querySelector(".sizeValue");
-const sizeInput = document.querySelector(".sizeInput");
+const colorMode = document.querySelector(".color__mode");
+const rainbowMode = document.querySelector(".rainbow__mode");
+const eraserMode = document.querySelector(".eraser__mode");
+const clearButton = document.querySelector(".clear__button");
+const gridMode = document.querySelector(".grid__toggle");
+const sizeValue = document.querySelector(".size__value");
+const sizeInput = document.querySelector(".size__input");
 const grid = document.querySelector(".grid");
 
 colorPicker.oninput = (e) => setColor(e.target.value);

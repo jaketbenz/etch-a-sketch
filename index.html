@@ -26,34 +26,52 @@
 </head>
 
 <body>
-    <main class="container d-flex justify-content-center align-items-center">
-        <div
-            class="settingsContainer col-2 d-flex flex-column align-items-center p-5">
-            <input class="colorPicker my-2" type="color"
-                value="#333333">
-            <button class="colorMode my-2">Color
-                Mode</button>
-            <button class="rainbowMode my-2">Rainbow
-                Mode</button>
-            <button class="eraserMode my-2">Eraser Mode</button>
-            <button class="clearButton my-2">Clear</button>
-            <button class="gridMode my-2">Grid Lines</button>
-            <div class="sizeValue" id="sizeValue">16 x 16</div>
-            <input class="sizeInput" type="range" id="sizeSlider" value="16"
-                min="1" max="100">
+    <main class="mainContainer">
+        <header class="headerContainer">
+            <h1 class="header">Etch-a-sketch</h1>
+        </header>
+        <div class="modeContainer">
+            <div class="modes">
+                <input class="colorPicker" type="color" value="#333333">
+                <button class="color__mode">
+                    Color Mode
+                </button>
+                <button class="rainbow__mode">
+                    Rainbow Mode
+                </button>
+                <button class="eraser__mode">
+                    Eraser Mode
+                </button>
+            </div>
+            <div class="settings">
+                <button class="grid__toggle">
+                    Grid Lines
+                </button>
+                <button class="clear__button">
+                    Clear
+                </button>
+                <div class="size">
+                    <div class="size__value" id="sizeValue">
+                        16 x 16
+                    </div>
+                    <input class="size__input" type="range" id="sizeSlider"
+                        value="16" min="1" max="100">
+                </div>
+            </div>
+
         </div>
-        <div class="sketctContainer col-8 text-center d-flex flex-column align-items-center">
-            <h1 class="grid__header">Etch-a-sketch</h1>
-            <div class="grid m-5"></div>
+        <div class="sketchContainer">
+            <div class="grid"></div>
         </div>
-        <div class="hiddenContainer col-2"></div>
     </main>
     <footer class="footer d-flex justify-content-center">
         <p>
-            Made by <a class="footer--link" href="https://jakebenz.dev">Jake
-                Benz</a>
+            Made by
+            <a class="footer__link" href="https://jakebenz.dev">
+                Jake Benz
+            </a>
             |
-            <a class="footer--link"
+            <a class="footer__link"
                 href="https://github.com/jaketbenz/etch-a-sketch">Github</a>
             <i class="fa-brands fa-github"></i>
         </p>
